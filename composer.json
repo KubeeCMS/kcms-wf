@@ -1,0 +1,40 @@
+{
+    "name": "kubeecms/kcms-wf",
+    "type": "wordpress-plugin",
+    "license": "GNU",
+    "description": "security extension",
+    "homepage": "https://github.com/KubeeCMS/KCMS-wf/",
+    "authors": [{
+            "name": "Kubee",
+            "email": "kubee@kubeecms.com",
+            "homepage": "https://github.com/KubeeCMS/"
+        },
+        {
+            "name": "Romeo Covaci",
+            "email": "romeo.covaci@kubeecms.com",
+            "homepage": "https://github.com/KubeeCMS/"
+        }
+    ],
+    "keywords": [
+        "kubeecms"
+    ],
+    "support": {
+        "issues": "https://github.com/KubeeCMS/KCMS-wf/issues",
+        "forum": "https://github.com/KubeeCMS/"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "lint": [
+            "phpcs --extensions=php --standard=PSR12 app config"
+        ],
+        "post-autoload-dump": [
+            "Roots\\Acorn\\ComposerScripts::postAutoloadDump"
+        ]
+    }
+}
